@@ -1,0 +1,25 @@
+Script started on Mon Dec 22 19:58:16 2025
+[1m[7m%[27m[1m[0m                                                                                                                          
+ 
+
+[0m[27m[24m[Je058903@LMES-CL72LLQ0GM part12-containers-applications % [K[?2004hscriptdocker container run -it ubuntu bash[?2004l
+
+[?2004h]0;root@47d27fa79e0f: /root@47d27fa79e0f:/# cd usr/src
+[?2004l
+[?2004h]0;root@47d27fa79e0f: /usr/srcroot@47d27fa79e0f:/usr/src# ls
+[?2004l
+[?2004h]0;root@47d27fa79e0f: /usr/srcroot@47d27fa79e0f:/usr/src# tocu  uch index.js
+[?2004l
+[?2004h]0;root@47d27fa79e0f: /usr/srcroot@47d27fa79e0f:/usr/src# ls
+[?2004l
+index.js
+[?2004h]0;root@47d27fa79e0f: /usr/srcroot@47d27fa79e0f:/usr/src# exit
+[?2004l
+exit
+[1m[7m%[27m[1m[0m                                                                                                                          
+ 
+
+[0m[27m[24m[Je058903@LMES-CL72LLQ0GM part12-containers-applications % [K[?2004heexit[?2004l
+
+
+Script done on Mon Dec 22 19:58:46 2025
