@@ -1,0 +1,97 @@
+Script started on Sun Jan  4 19:21:10 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                       
+ 
+
+[0m[27m[24m[Je058903@LMES-CL72LLQ0GM part12-containers-applications % [K[?2004hddocker container ls[?2004l
+
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+be603c07cb30   mongo     "docker-entrypoint.s…"   21 minutes ago   Up 21 minutes   0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                                                                                       
+ 
+
+[0m[27m[24m[Je058903@LMES-CL72LLQ0GM part12-containers-applications % [K[?2004hddocker exec -it todo-backend-mongo-1 mongosh[?2004l
+
+]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	695aafc3f440930f1d3f118b
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.10[0m
+Using MongoDB:		undefined
+[1m[33mUsing Mongosh[0m:		2.5.10
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[?2004h[1G[0Jtest> [7Gexit
+
+[?2004l[1m[7m%[27m[1m[0m                                                                                                                                                                                       
+ 
+
+[0m[27m[24m[Je058903@LMES-CL72LLQ0GM part12-containers-applications % [K[?2004hdocker exec -it todo-backend-mongo-1 mongosh[37Dcontainer ls                         [25D[19Dscript             [13Dls    cd Documents/GitHub/part12-containers-applications/[51Dpwd                                                [48Ddocker exec -it todo-backend-mongo-1 mongosh -u root -p example[?2004l
+
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	695aafd1c5a58f198c3f118b
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.10[0m
+Using MongoDB:		8.2.3
+[1m[33mUsing Mongosh[0m:		2.5.10
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[?2004h[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2026-01-04T17:59:50.288+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2026-01-04T17:59:50.493+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2026-01-04T17:59:50.493+00:00: We suggest setting the contents of sysfsFile to 0.
+   2026-01-04T17:59:50.493+00:00: vm.max_map_count is too low
+   2026-01-04T17:59:50.494+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+
+[1madmin[0m   100.00 KiB
+[1mconfig[0m  100.00 KiB
+[1mlocal[0m    72.00 KiB
+[1mtododb[0m  104.00 KiB
+[1G[0Jtest> [7Guse tododb
+
+switched to db tododb
+[1G[0Jtododb> [9Gdb.todos.insertOne()[1D[1G[0Jtododb> db.todos.insertOne[44m([49m)[28G[1G[0Jtododb> db.todos.insertOne[44m([49m{)[29G[1G[0Jtododb> db.todos.insertOne[44m([49m{})[30G[1D[1G[0Jtododb> db.todos.insertOne([44m{[49m})[29G[1G[0Jtododb> db.todos.insertOne([44m{[49mt})[30G[1G[0Jtododb> db.todos.insertOne([44m{[49mte})[31G[1G[0Jtododb> db.todos.insertOne([44m{[49mtes})[32G[1G[0Jtododb> db.todos.insertOne([44m{[49mtest})[33G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m:})[34G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: })[35G[1G[0Jtododb> db.todos.insertOne({[33mtest[39m: [32m"})[39m[36G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m""[39m})[37G[1D[1G[0Jtododb> db.todos.insertOne({[33mtest[39m: [44m[32m"[49m"[39m})[36G[1C[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m""[39m})[37G[1D[1G[0Jtododb> db.todos.insertOne({[33mtest[39m: [44m[32m"[49m"[39m})[36GIncrease the number of tools in my tool belt[1C[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m})[81G[1C[1G[0Jtododb> db.todos.insertOne[44m([49m{[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m})[82G[1D[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m})[81G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m,})[82G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, })[83G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, d})[84G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [36mdo[39m})[85G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, don})[86G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, done})[87G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, done })[88G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, done})[87G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m:})[88G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: })[89G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: f})[90G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: fa})[91G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: fal})[92G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: fals})[93G[1G[0Jtododb> db.todos.insertOne([44m{[49m[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: [33mfalse[39m})[94G[1C[1G[0Jtododb> db.todos.insertOne[44m([49m{[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: [33mfalse[39m})[95G[1C[1G[0Jtododb> db.todos.insertOne({[33mtest[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: [33mfalse[39m})[96G
+
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'695ab030c5a58f198c3f118c'[39m)
+}
+[1G[0Jtododb> [9Gdb.todos.find())[1G[0Jtododb> db.todos.find()[24G[1D[1G[0Jtododb> db.todos.find[44m([49m)[23G[1G[0Jtododb> db.todos.find[44m([49m{)[24G[1G[0Jtododb> db.todos.find[44m([49m{})[25G[1C[1G[0Jtododb> db.todos.find({})[26G
+
+[
+  {
+    _id: ObjectId([32m'695aaa95f7236553983f118c'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'695aaa95f7236553983f118d'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'695aaab52c38c99b742a6cd9'[39m),
+    text: [32m'Una prueba v1'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId([32m'695aaf591962ef2f7a3f118d'[39m),
+    text: [32m'prueba'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'695ab030c5a58f198c3f118c'[39m),
+    test: [32m'Increase the number of tools in my tool belt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jtododb> [9Gexit
+
+[?2004l[1m[7m%[27m[1m[0m                                                                                                                                                                                       
+ 
+
+[0m[27m[24m[Je058903@LMES-CL72LLQ0GM part12-containers-applications % [K[?2004hdocker exec -it todo-backend-mongo-1 mongosh -u root -p example[18D                  [19D -u root -p example[63D                                                               [63Deexit[?2004l
+
+
+Script done on Sun Jan  4 19:24:23 2026
