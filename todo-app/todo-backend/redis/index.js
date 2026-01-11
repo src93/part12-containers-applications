@@ -4,6 +4,7 @@ const { REDIS_URL } = require('../util/config')
 
 let getAsync
 let setAsync
+const hasRedis = !!REDIS_URL
 
 if (!REDIS_URL) {
   const redisIsDisabled = () => {
@@ -23,5 +24,6 @@ if (!REDIS_URL) {
 
 module.exports = {
   getAsync,
-  setAsync
+  setAsync,
+  hasRedis
 }
