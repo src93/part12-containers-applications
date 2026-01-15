@@ -1,0 +1,14 @@
+services:
+  app:
+    image: todo-back-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3003:3000
+    environment:
+      - MONGO_URL=mongodb://root:example@mongo:27017/tododb?authSource=admin
+      - REDIS_URL=redis://redis:6379
+    container_name: todo-back-dev
