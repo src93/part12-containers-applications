@@ -3,12 +3,13 @@ FROM node:20 AS build
 WORKDIR /usr/src/app
 
 COPY . .
+# Default value for the backend URL
+ARG VITE_BACKEND_URL=http://localhost:8080/api
+ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
 
-ENV VITE_BACKEND_URL=http://localhost:3000
-
-RUN npm config set strict-ssl false
-RUN npm ci
-RUN npm run build
+RUN npm config set strict-ssl false && \
+    npm ci && \
+    npm run build
 
 FROM node:20 AS test
 
@@ -24,8 +25,8 @@ WORKDIR /usr/src/app
 
 COPY --from=build /usr/src/app/dist ./dist
 
-RUN npm config set strict-ssl false
-RUN npm install -g serve
+RUN npm config set strict-ssl false && \
+    npm install -g serve
 
 CMD ["serve", "dist"]
 
